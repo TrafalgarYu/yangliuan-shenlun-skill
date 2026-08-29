@@ -1,6 +1,8 @@
-# 杨柳岸申论 · WorkBuddy Skill
+# 杨柳岸申论 Skill
 
-> 公考申论解题与备考助手 —— 基于「杨柳岸申论方法体系（课程实料版）」提炼的 WorkBuddy/Claude Skills 格式技能包。
+> 公考申论解题与备考助手 —— 基于「杨柳岸申论方法体系（课程实料版）」提炼的 Agent Skills 格式技能包，可用于 WorkBuddy、Claude Code 等兼容工具。
+
+[![skills.sh](https://skills.sh/b/TrafalgarYu/yangliuan-shenlun-skill)](https://skills.sh/TrafalgarYu/yangliuan-shenlun-skill)
 
 ## 这是什么
 
@@ -40,6 +42,20 @@
 
 ## 安装
 
+### Agent Skills CLI（推荐）
+
+```bash
+npx skills add https://github.com/TrafalgarYu/yangliuan-shenlun-skill --skill yangliuan-shenlun
+```
+
+更新已安装的 Skill：
+
+```bash
+npx skills update yangliuan-shenlun
+```
+
+### WorkBuddy / 兼容目录
+
 将本仓库克隆到 WorkBuddy 的技能目录：
 
 ```bash
@@ -47,11 +63,23 @@ git clone https://github.com/TrafalgarYu/yangliuan-shenlun-skill.git \
   ~/.workbuddy/skills/yangliuan-shenlun
 ```
 
+### 本地校验
+
+仓库提供一个不修改文件的静态检查脚本，用于确认入口文件、参考资料、评测 JSON 和 README 关键安装信息完整：
+
+```bash
+bash scripts/validate.sh
+```
+
 ## 示例与回归测试
 
 - `examples/反模板判断示例.md` 展示怎样把课程术语还原为“提出假设、回到材料验证、必要时弃用”的判断过程。
 - `evals/evals.json` 包含十二个回归场景：六个基础作答题检查功能不回退，六个方法口径题检查阅读遍数、连词歧义、残缺材料、阅卷边界、中观与小标题、框架与模板。
 - `docs/Skill打磨报告.md` 记录本轮课程对账、风险判断、改动依据和实跑结论。
+
+## 许可证
+
+课程衍生笔记、示例、Skill 指令和配套文档按 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可，仅限非商业使用，并须保留署名、以相同方式共享。课程原始内容、杨柳岸名称及相关商标权利不因本仓库许可而转移。
 
 ## 免责声明
 
