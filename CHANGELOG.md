@@ -6,6 +6,7 @@
 - README 增加 Agent Skills CLI 安装、更新命令和 skills.sh 徽章。
 - 新增 `scripts/validate.sh`，用于静态校验入口、参考资料、评测 JSON 和安装信息。
 - 修复 SKILL.md frontmatter：`version` 与 `updated` 加引号，避免 YAML 将日期解析为 date 对象导致加载报错（`Object of type date is not JSON serializable`），版本号同步至 0.2.1。
+- 修复 `scripts/validate.sh` 在 Windows（Git Bash/MSYS）下的路径兼容：ROOT 经 `cygpath` 转为 Windows 路径后再传给 Python，消除"缺少必备文件"误报；Linux/macOS 行为不变。
 
 ## v0.2.0 / 2026-08-29
 

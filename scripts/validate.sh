@@ -5,6 +5,12 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+# Windows（Git Bash/MSYS）下 pwd 返回 msys 风格路径（/c/...），Windows 版 Python 不识别，
+# 会误报"缺少必备文件"；经 cygpath 转为 Windows 路径后再传入。Linux/macOS 无 cygpath，保持原路径。
+if command -v cygpath >/dev/null 2>&1; then
+  ROOT="$(cygpath -w "$ROOT")"
+fi
+
 python - "$ROOT" <<'PY'
 import json
 import re
