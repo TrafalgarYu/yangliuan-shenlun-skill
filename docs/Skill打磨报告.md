@@ -12,6 +12,17 @@
 
 本轮修订没有另造一套申论方法，而是把课程里原本存在的优先级、适用条件和验证过程重新放回执行入口。
 
+## 一点五、发布状态
+
+- `implemented`：修订内容已写入仓库。
+- `locally-verified`：结构检查、JSON/YAML 解析、`git diff --check` 和实跑评测已完成。
+- `pushed`：已推送 `codex/fidelity-audit`。
+- `merged`：已合并到 `main`，合并提交为 `f5ace0aca222309c03fe9bf75a0227e5a6572b7d`。
+- `live-verified`：GitHub `main` 的 raw `SKILL.md` 和 `README.md` 已返回当前修订内容。
+- `deployed`：不适用。本项目是可被安装的 Skill 包，没有本项目维护的服务、生产进程或 CDN。
+- `knowledge-closed`：本报告、README、CHANGELOG 和 Skill 入口已同步到当前合并状态。
+- `cleaned`：未执行。评测快照、基线和 feature 分支仍保留，等待用户在本报告后明确确认清场。
+
 ## 二、课程覆盖审计
 
 27 节课程均能在仓库八份笔记中找到对应归宿：理念课 7 节、技巧课 11 节、基础理论课 8 节、专题总梳理 1 节。按课程主题和关键命题对账，笔记层覆盖度约为 85%—95%。这个比例表示核心主张、方法、案例和主要反例已有记录，不代表逐字稿内容被逐句保留。
